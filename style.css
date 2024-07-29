@@ -1,0 +1,24 @@
+h1 {
+    font-size: 5em;
+}
+
+#profile_pic {
+    height: 400px
+}
+
+body{
+    background-color: blueviolet;
+    color: wheat
+}
+
+div{
+    background-color: rgb(68, 68, 41);
+}
+
+a {
+    text-decoration: none;
+}
+
+.socials {
+    height: 50px
+}
