@@ -8,5 +8,5 @@ Expierence section - class
 Project section - class
     -   - one proj class obj per 
 
-Contact info socials 
+Contact info 
     -   

@@ -19,10 +19,10 @@ function ExperienceSection(){
                         img = {DAPLAB}
                         company = "UCI DAPLAB"
                         role = "Incoming Undergraduate Research Assistant"
-                        time = "2024 - Present"
+                        time = "Sep. 2025 - Present"
                         descr = ""
                         url = ""
-                        color = "green"
+                        color = "red"
                     />
                     <Experience 
                         img = {BRSS}
@@ -37,7 +37,7 @@ function ExperienceSection(){
                         img = {UCI}
                         company = "University of California, Irvine"
                         role = "B.S Computer Science"
-                        time = "2023 - 2027"
+                        time = "Sept. 2023 - Jun. 2027"
                         descr = ""
                         url = ""
                         color = "yellow"

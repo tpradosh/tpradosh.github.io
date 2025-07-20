@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div className = "bg-black text-white text-center w-full min-h-screen overflow-x-hidden" style={{ width: '100vw', maxWidth: '100vw' }}>
+      <div className = "bg-black text-white text-center">
         <div>
           <Taskbar />
         </div>
