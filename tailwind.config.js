@@ -18,6 +18,7 @@ export default {
         yellow : "#F5B82E",
         lime : "#12CF3E",
         indigo : "#A682FF",
+        teal : "#0081A7",
 
       }
     },

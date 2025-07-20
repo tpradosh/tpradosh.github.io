@@ -3,20 +3,38 @@ import Test from "./assets/test.png"
 import ZOTNostic from './assets/ZOTNostic.png'
 import BTC from './assets/btc.png'
 import CVOT from './assets/cvot.jpg'
+import navaid from './assets/navaid.png'
+import urbanresponse from './assets/urbanresponse.jpg'
 
 function ProjectSection() {
 
 
     return(
         <>
-            <div className = "text-green text-4xl font-bold pt-[15px]"> 
+            <div className = "text-green text-3xl md:text-4xl font-bold pt-[15px] px-4 md:px-0"> 
             🚀 Projects
             </div>
             <div className = "flex flex-wrap justify-center">
+            <ProjectCard 
+                    img = {urbanresponse}
+                    title = "UrbanResponse AI"
+                    time = "Jun. 2025"
+                    descr = "An emergency response simulation that demonstrates intelligent emergency vehicle dispatching"
+                    url = "https://github.com/tpradosh/UrbanResponse-AI"
+                    color = "indigo"
+                /> 
+                <ProjectCard 
+                    img = {navaid}
+                    title = "NavAid"
+                    time = "May 2025"
+                    descr = "A Navigation Aid for the visually impaired"
+                    url = "https://github.com/tpradosh/NavAid"
+                    color = "teal"
+                /> 
                 <ProjectCard 
                     img = {BTC}
                     title = "Bitcoin OHLC Visualizer"
-                    time = "May. 2025"
+                    time = "May 2025"
                     descr = "A Visualizer of Bitcoin data in Open Low High Close Charts"
                     url = "https://github.com/tpradosh/btc"
                     color = "lime"

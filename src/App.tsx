@@ -23,28 +23,28 @@ function App() {
         <div className = "fade-down">
           <section id = "Experience">
 
-            <div className = "py-12">
+            <div className = "py-8 md:py-12 px-4 md:px-0">
               <ExperienceSection />
             </div>
           </section>
 
-          <div className = "h-[20vh] text-black">
+          <div className = "h-[10vh] md:h-[20vh] text-black">
             this is for spacing
           </div>
 
           <section id = "Projects">
-            <div className = "py-12 ml-[6vw] mr-[6vw]">
+            <div className = "py-8 md:py-12 px-4 md:px-[6vw]">
               <ProjectSection />
             </div>
           </section>
 
 
-          <div className = "h-[20vh] text-black">
+          <div className = "h-[10vh] md:h-[20vh] text-black">
             this is for spacing
           </div>
 
           <section id = "Contact">
-            <div className = "h-[20vh]">
+            <div className = "h-[10vh] md:h-[20vh]">
               <Contact />
             </div>
           </section>
