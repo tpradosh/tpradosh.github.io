@@ -21,13 +21,13 @@ function Intro(){
 
 
                 <div className = 'fade-up'>
-                    <div className = 'flex items-center justify-center h-[40vh] md:h-[50vh] px-4'>
-                        <img src= {test} alt="Profile" className="rounded-full w-[60vw] h-[60vw] max-w-[40vh] max-h-[40vh] object-cover" />
+                    <div className = 'flex items-center justify-center h-[30vh] md:h-[50vh] px-4'>
+                        <img src= {test} alt="Profile" className="rounded-full w-[50vw] h-[50vw] max-w-[35vh] max-h-[35vh] object-cover" />
                     </div>
                 </div>
 
                 <div className = "fade-down">
-                   <div className = 'flex items-center justify-center h-[25vh] md:h-[30vh] px-4'>
+                   <div className = 'flex items-center justify-center h-[20vh] md:h-[30vh] px-4'>
                         <Intro_txt />
                     </div>
                 </div>

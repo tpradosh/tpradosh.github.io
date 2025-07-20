@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div className = "bg-black text-white text-center w-full min-h-screen overflow-x-hidden">
+      <div className = "bg-black text-white text-center w-full min-h-screen overflow-x-hidden" style={{ width: '100vw', maxWidth: '100vw' }}>
         <div>
           <Taskbar />
         </div>
@@ -22,15 +22,10 @@ function App() {
 
         <div className = "fade-down">
           <section id = "Experience">
-
             <div className = "py-8 md:py-12 px-4 md:px-0">
               <ExperienceSection />
             </div>
           </section>
-
-          <div className = "h-[10vh] md:h-[20vh] text-black">
-            this is for spacing
-          </div>
 
           <section id = "Projects">
             <div className = "py-8 md:py-12 px-4 md:px-[6vw]">
@@ -38,13 +33,8 @@ function App() {
             </div>
           </section>
 
-
-          <div className = "h-[10vh] md:h-[20vh] text-black">
-            this is for spacing
-          </div>
-
           <section id = "Contact">
-            <div className = "h-[10vh] md:h-[20vh]">
+            <div className = "h-[5vh] md:h-[10vh]">
               <Contact />
             </div>
           </section>

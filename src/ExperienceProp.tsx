@@ -18,7 +18,7 @@ function Experience({ img, company, role, time, descr, color, url}: ExperiencePr
     
     return (
         <a href = {url}>
-            <div className="hover-large mt-[5vh] w-full p-4 md:p-6 border border-white rounded-md flex flex-col md:flex-row items-start bg-black">
+            <div className="hover-large mt-[2vh] md:mt-[5vh] w-full p-4 md:p-6 border border-white rounded-md flex flex-col md:flex-row items-start bg-black">
                 <div className="w-full md:w-1/4 mb-4 md:mb-0 flex justify-center md:justify-start">
                     <img src={img} className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] object-cover rounded-lg"/>
                 </div>
