@@ -16,7 +16,7 @@ function NavigationBar(){
     useEffect(() => {
         const handleScroll = () => {
         const currentY = window.scrollY;
-        setShow(currentY > 400); // show only when not at top
+        setShow(currentY > 200); // show earlier on mobile
         };
     
         window.addEventListener('scroll', handleScroll);
@@ -26,11 +26,11 @@ function NavigationBar(){
 
 
     return (
-        <div className = {`fixed top-0 w-full z-50 transition-transform duration 300' ${
-            show ? 'translate-y-0' : '-translate-y-full'} bg-green text-black shadow-md`}>
+        <div className = {`fixed top-0 w-full z-50 transition-transform duration 300 bg-green text-black shadow-md ${
+            show ? 'translate-y-0' : 'md:-translate-y-full'}`}>
             
             
-            <div className = "px-4 py-3 flex items-center justify-between">
+            <div className = "px-4 py-3 flex items-center justify-between w-full">
                 <div className = "text-xl font-bold">Pradosh T</div>
                 
                 {/* Desktop Navigation */}
@@ -54,7 +54,7 @@ function NavigationBar(){
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div className="md:hidden bg-green border-t border-black/20">
+                <div className="md:hidden bg-green border-t border-black/20 w-full">
                     <nav className="flex flex-col space-y-2 p-4">
                         <a href="#Home" className="hover-box_black py-2" onClick={() => setMobileMenuOpen(false)}>Home</a>
                         <a href="#Experience" className="hover-box_black py-2" onClick={() => setMobileMenuOpen(false)}>Experience</a>
