@@ -17,16 +17,16 @@ function ExperienceSection(){
                 <div className = "mx-4 md:ml-[10vw] md:mr-[10vw] mt-4 md:mt-0">
                     <Experience 
                         img = {DAPLAB}
-                        company = "UCI DAPLAB"
-                        role = "Incoming Undergraduate Research Assistant"
+                        company = "UCI Design and Partnership Lab"
+                        role = "Undergraduate Research Assistant"
                         time = "Sep. 2025 - Present"
-                        descr = ""
-                        url = ""
+                        descr = "Focusing on a way to improve education using Artifical Inteligence and Computer Science"
+                        url = "https://www.daplab.education.uci.edu/"
                         color = "red"
                     />
                     <Experience 
                         img = {BRSS}
-                        company = "Boundary Remote Sensing Systems"
+                        company = "Boundary Remote Subsurface Systems"
                         role = "Software Developer"
                         time = "Jan. 2025 - Present"
                         descr = "Created Wifi Mappings leveraging RF RSSI Wifi data to map out a geospatial area"
