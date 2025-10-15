@@ -26,9 +26,9 @@ function ExperienceSection(){
                     />
                     <Experience 
                         img = {BRSS}
-                        company = "Boundary Remote Subsurface Systems"
+                        company = "Boundary Remote Subsurface Solutions"
                         role = "Software Developer"
-                        time = "Jan. 2025 - Present"
+                        time = "Jan. 2025 - May 2025"
                         descr = "Created Wifi Mappings leveraging RF RSSI Wifi data to map out a geospatial area"
                         url = "https://www.linkedin.com/company/boundary-remote-sensing-systems/"
                         color = "blue"
@@ -39,7 +39,7 @@ function ExperienceSection(){
                         role = "B.S Computer Science"
                         time = "Sept. 2023 - Jun. 2027"
                         descr = ""
-                        url = ""
+                        url = "https://uci.edu/"
                         color = "yellow"
                     />
                     {/* <Experience 

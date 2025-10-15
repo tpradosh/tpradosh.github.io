@@ -18,7 +18,7 @@ function ProjectSection() {
             <ProjectCard 
                     img = {urbanresponse}
                     title = "UrbanResponse AI"
-                    time = "June 2025"
+                    time = "Jun. 2025"
                     descr = "An emergency response simulation that demonstrates intelligent emergency vehicle dispatching"
                     url = "https://github.com/tpradosh/UrbanResponse-AI"
                     color = "indigo"
@@ -26,7 +26,7 @@ function ProjectSection() {
                 <ProjectCard 
                     img = {navaid}
                     title = "NavAid"
-                    time = "May. 2025"
+                    time = "May 2025"
                     descr = "A Navigation Aid for the visually impaired"
                     url = "https://github.com/tpradosh/NavAid"
                     color = "teal"
@@ -34,7 +34,7 @@ function ProjectSection() {
                 <ProjectCard 
                     img = {BTC}
                     title = "Bitcoin OHLC Visualizer"
-                    time = "May. 2025"
+                    time = "May 2025"
                     descr = "A Visualizer of Bitcoin data in Open Low High Close Charts"
                     url = "https://github.com/tpradosh/btc"
                     color = "lime"
