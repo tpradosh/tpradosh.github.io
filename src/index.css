@@ -17,16 +17,15 @@
 }
 
 .hover-box_black{
-    transition: transform 1.2s ease, color 0.8s ease;
+    transition: color 0.5s ease;
     border: 2px;
     border-radius: 4px;
     padding: 4px;
 }
 
 .hover-box_black:hover {
-    color: #1B998B;
-    background-color: #000000; 
-    border-color: #000000;
+    color: white;
+    
 }
 
 .hover-large{
