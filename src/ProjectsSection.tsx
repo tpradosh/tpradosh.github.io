@@ -18,7 +18,7 @@ function ProjectSection() {
             <ProjectCard 
                     img = {urbanresponse}
                     title = "UrbanResponse AI"
-                    time = "Jun. 2025"
+                    time = "June 2025"
                     descr = "An emergency response simulation that demonstrates intelligent emergency vehicle dispatching"
                     url = "https://github.com/tpradosh/UrbanResponse-AI"
                     color = "indigo"

@@ -1,6 +1,5 @@
 import Intro_txt from './Intro_txt';
-import test from './assets/test.png'
-
+import pfp from './assets/PradoshThirunavukkarasu.jpg'
 function Intro(){
 
     return (
@@ -22,7 +21,7 @@ function Intro(){
 
                 <div className = 'fade-up'>
                     <div className = 'flex items-center justify-center h-[30vh] md:h-[50vh] px-4'>
-                        <img src= {test} alt="Profile" className="rounded-full w-[50vw] h-[50vw] max-w-[35vh] max-h-[35vh] object-cover" />
+                        <img src= {pfp} alt="Profile" className="rounded-full w-[50vw] h-[50vw] max-w-[35vh] max-h-[35vh] object-cover" />
                     </div>
                 </div>
 

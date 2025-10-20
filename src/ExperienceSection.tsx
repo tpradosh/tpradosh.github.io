@@ -20,7 +20,7 @@ function ExperienceSection(){
                         company = "UCI Design and Partnership Lab"
                         role = "Undergraduate Research Assistant"
                         time = "Sep. 2025 - Present"
-                        descr = "Focusing on a way to improve education using Artifical Inteligence and Computer Science"
+                        descr = "WholeChild Analytics Project"
                         url = "https://www.daplab.education.uci.edu/"
                         color = "red"
                     />
