@@ -13,7 +13,8 @@ function Experience({ img, company, role, time, descr, color, url}: ExperiencePr
         blue: 'text-blue', 
         green: 'text-green',
         yellow: 'text-yellow',
-        red: 'text-red'
+        red: 'text-red',
+        purple : 'text-purple'
     };
     
     

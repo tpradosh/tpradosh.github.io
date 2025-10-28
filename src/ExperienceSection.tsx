@@ -2,7 +2,7 @@ import Experience from "./ExperienceProp"
 import BRSS from "./assets/BRSS.jpeg"
 import UCI from "./assets/UCI.png"
 import DAPLAB from "./assets/DAPLAB.png"
-
+import CTC from "./assets/ctc.png"
 function ExperienceSection(){
 
 
@@ -15,12 +15,22 @@ function ExperienceSection(){
                 </div>
 
                 <div className = "mx-4 md:ml-[10vw] md:mr-[10vw] mt-4 md:mt-0">
+                <Experience 
+                        img = {CTC}
+                        company = "Commit the Change"
+                        role = "Full Stack Developer"
+                        time = "Sep. 2025 - Present"
+                        descr = "Collaborating with a team of 14 developers to build software for local nonprofits"
+                        url = "https://ctc-uci.com/"
+                        color = "purple"
+                    />
+
                     <Experience 
                         img = {DAPLAB}
                         company = "UCI Design and Partnership Lab"
                         role = "Undergraduate Research Assistant"
                         time = "Sep. 2025 - Present"
-                        descr = "WholeChild Analytics Project"
+                        descr = "WholeChild Analytics Project : Building AI products for 1,200+ students"
                         url = "https://www.daplab.education.uci.edu/"
                         color = "red"
                     />
