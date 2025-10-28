@@ -14,7 +14,7 @@ function Experience({ img, company, role, time, descr, color, url}: ExperiencePr
         green: 'text-green',
         yellow: 'text-yellow',
         red: 'text-red',
-        purple : 'text-purple'
+        purple : 'text-purple',
     };
     
     

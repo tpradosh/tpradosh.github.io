@@ -1,7 +1,4 @@
 
-
-/* used for the projects section color wheel picking part, not experience
-for experience go to expeirenceprop.tsx and add the text color to the mapping there*\
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -22,6 +19,7 @@ export default {
         lime : "#12CF3E",
         indigo : "#A682FF",
         teal : "#0081A7",
+        purple : "#AE00FF",
       }
     },
   },
