@@ -14,7 +14,6 @@ function ProjectSection() {
       <Reveal>
         <ScrambleText
           as="h2"
-          playOnView
           text="Projects"
           className="font-display text-4xl font-bold tracking-tight md:text-5xl"
         />

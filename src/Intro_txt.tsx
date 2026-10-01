@@ -12,9 +12,6 @@ function Intro_txt() {
         text="Pradosh Thirunavukkarasu"
         className="mt-3 whitespace-nowrap font-display text-[clamp(1.35rem,5.2vw,3.75rem)] font-extrabold leading-none tracking-tight text-[var(--ink)]"
       />
-      <p className="mx-auto mt-5 max-w-xl text-base text-[var(--muted)] md:text-xl">
-        Welcome to my website — a tactile, kinetic space for the software I build.
-      </p>
     </div>
   );
 }

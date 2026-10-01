@@ -12,7 +12,6 @@ function ExperienceSection() {
       <Reveal>
         <ScrambleText
           as="h2"
-          playOnView
           text="Experience"
           className="font-display text-4xl font-bold tracking-tight md:text-5xl"
         />
