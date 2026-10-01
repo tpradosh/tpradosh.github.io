@@ -1,70 +1,86 @@
-import { useEffect, useState } from 'react';
+import { useState } from "react";
+import { useLenis } from "lenis/react";
+import Magnetic from "./Magnetic";
+import ScrambleText from "./ScrambleText";
 
+const links = [
+  { href: "#Home", label: "Home" },
+  { href: "#Experience", label: "Experience" },
+  { href: "#Projects", label: "Projects" },
+  { href: "#Contact", label: "Contact" },
+];
 
+function NavigationBar() {
+  const lenis = useLenis();
+  const [open, setOpen] = useState(false);
 
-function NavigationBar(){
+  const go = (href: string) => {
+    setOpen(false);
+    lenis?.scrollTo(href, { offset: -18, duration: 1.15 });
+  };
 
+  return (
+    <header className="fixed top-4 left-0 right-0 z-40 flex justify-center px-4">
+      <div className="neo-raised neo-sheen w-full max-w-5xl rounded-[28px] px-4 py-3 md:px-6">
+        <div className="flex items-center justify-between gap-4">
+          <Magnetic>
+            <button
+              type="button"
+              onClick={() => go("#Home")}
+              className="font-display text-lg font-bold tracking-tight"
+            >
+              <ScrambleText text="Pradosh T" />
+            </button>
+          </Magnetic>
 
-    /*
-        Nav bar with top, expier, projs, contacts etc
-
-        appears when not at the top of the page
-    */
-    const [show, setShow] = useState(false);
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-        const currentY = window.scrollY;
-        setShow(currentY > 200); // show earlier on mobile
-        };
-    
-        window.addEventListener('scroll', handleScroll);
-    
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []); 
-
-
-    return (
-        <div className = {`fixed top-0 w-full z-50 transition-transform duration 300 bg-green text-black shadow-md ${
-            show ? 'translate-y-0' : 'md:-translate-y-full'}`}>
-            
-            
-            <div className = "px-4 py-3 flex items-center justify-between w-full">
-                <div className = "text-xl font-bold">Pradosh T</div>
-                
-                {/* Desktop Navigation */}
-                <nav className = "hidden md:flex space-x-4 font-bold">
-                    <a href = "#Home" className = "hover-box_black">Home</a>
-                    <a href = "#Experience" className = "hover-box_black">Experience</a>
-                    <a href = "#Projects" className = "hover-box_black">Projects</a>
-                    <a href = "#Contact" className = "hover-box_black">Contact</a>
-                </nav>
-
-                {/* Mobile Menu Button */}
-                <button 
-                    className="md:hidden p-2 rounded hover:bg-black/10 transition-colors"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          <nav className="hidden items-center gap-1 md:flex">
+            {links.map((link) => (
+              <Magnetic key={link.href} strength={0.4}>
+                <button
+                  type="button"
+                  onClick={() => go(link.href)}
+                  className="neo-raised-sm neo-press-sm rounded-2xl px-4 py-2 text-sm font-semibold text-[var(--ink)]"
                 >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
+                  <ScrambleText text={link.label} />
                 </button>
-            </div>
+              </Magnetic>
+            ))}
+          </nav>
 
-            {/* Mobile Menu */}
-            {mobileMenuOpen && (
-                <div className="md:hidden bg-green border-t border-black/20 w-full">
-                    <nav className="flex flex-col space-y-2 p-4">
-                        <a href="#Home" className="hover-box_black py-2" onClick={() => setMobileMenuOpen(false)}>Home</a>
-                        <a href="#Experience" className="hover-box_black py-2" onClick={() => setMobileMenuOpen(false)}>Experience</a>
-                        <a href="#Projects" className="hover-box_black py-2" onClick={() => setMobileMenuOpen(false)}>Projects</a>
-                        <a href="#Contact" className="hover-box_black py-2" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-                    </nav>
-                </div>
-            )}
+          <button
+            type="button"
+            className="neo-raised-sm neo-press-sm rounded-2xl p-2 md:hidden"
+            aria-label="Open menu"
+            onClick={() => setOpen((value) => !value)}
+          >
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={open ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              />
+            </svg>
+          </button>
         </div>
-    );
+
+        {open && (
+          <nav className="mt-3 flex flex-col gap-2 border-t border-[rgba(26,35,50,0.08)] pt-3 md:hidden">
+            {links.map((link) => (
+              <button
+                key={link.href}
+                type="button"
+                onClick={() => go(link.href)}
+                className="neo-inset rounded-2xl px-4 py-3 text-left font-semibold"
+              >
+                {link.label}
+              </button>
+            ))}
+          </nav>
+        )}
+      </div>
+    </header>
+  );
 }
 
-export default NavigationBar
+export default NavigationBar;

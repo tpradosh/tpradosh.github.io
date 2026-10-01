@@ -1,47 +1,41 @@
-
-import Intro from './Intro.tsx'
-import Taskbar from './NavigationBar.tsx'
-import ExperienceSection from './ExperienceSection.tsx'
-import ProjectSection from './ProjectsSection.tsx'
-import Contact from './Contact.tsx'
+import Intro from "./Intro.tsx";
+import Taskbar from "./NavigationBar.tsx";
+import ExperienceSection from "./ExperienceSection.tsx";
+import ProjectSection from "./ProjectsSection.tsx";
+import Contact from "./Contact.tsx";
+import SmoothScroll from "./SmoothScroll.tsx";
+import CustomCursor from "./CustomCursor.tsx";
+import { CursorProvider } from "./CursorContext.tsx";
 
 function App() {
-
   return (
-    <>
-      <div className = "bg-black text-white text-center">
-        <div>
+    <SmoothScroll>
+      <CursorProvider>
+        <CustomCursor />
+        <div className="grain" />
+
+        <div className="relative text-[var(--ink)]">
           <Taskbar />
-        </div>
 
-        <section id = "Home">
-          <div className = "min-h-screen">
+          <section id="Home">
             <Intro />
-          </div>
-        </section>
-
-        <div className = "fade-down">
-          <section id = "Experience">
-            <div className = "py-8 md:py-12 px-4 md:px-0">
-              <ExperienceSection />
-            </div>
           </section>
 
-          <section id = "Projects">
-            <div className = "py-8 md:py-12 px-4 md:px-[6vw]">
-              <ProjectSection />
-            </div>
+          <section id="Experience" className="py-16 md:py-24">
+            <ExperienceSection />
           </section>
 
-          <section id = "Contact">
-            <div className = "h-[5vh] md:h-[10vh]">
-              <Contact />
-            </div>
+          <section id="Projects" className="py-16 md:py-24">
+            <ProjectSection />
+          </section>
+
+          <section id="Contact" className="pt-8">
+            <Contact />
           </section>
         </div>
-      </div>
-    </>
-  )
+      </CursorProvider>
+    </SmoothScroll>
+  );
 }
 
-export default App
+export default App;

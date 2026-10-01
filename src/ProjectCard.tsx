@@ -1,60 +1,46 @@
-interface ProjectCard{
-    img: string;
-    title: string;
-    time: string;
-    descr: string;
-    url: string;
-    color: string;
+import Magnetic from "./Magnetic";
+import Reveal from "./Reveal";
+import TiltCard from "./TiltCard";
+
+interface ProjectCard {
+  img: string;
+  title: string;
+  time: string;
+  descr: string;
+  url: string;
 }
 
+function ProjectCard({ img, title, time, descr, url }: ProjectCard) {
+  const imageClass =
+    title === "NavAid"
+      ? "h-48 w-full object-contain"
+      : "h-48 w-full object-cover";
 
-function ProjectCard({ img, title, time, descr, color, url}: ProjectCard) {
-    const Map: Record<string, string> = {
-      blue: 'text-blue', 
-      lgreen: 'text-dgreen',
-      yellow : 'text-yellow',
-      lime : 'text-lime',
-      indigo : 'text-indigo',
-      red : 'text-red',
-      teal : 'text-teal'
-  };
-
-  // Special handling for NavAid image sizing
-  const getImageClass = () => {
-    if (title === "NavAid") {
-      return "w-full h-48 object-contain rounded-t-md bg-gray-800";
-    }
-    return "w-full h-48 object-cover rounded-t-md";
-  };
-
-  // Special handling for NavAid title color
-  const getTitleStyle = () => {
-    if (title === "NavAid") {
-      return { color: '#0081A7' }; // Using the teal color from tailwind config
-    }
-    return {};
-  };
-
-
-    return (
-          <div className="hover-large w-full sm:w-1/2 lg:w-1/3 p-2 md:p-4">
-            <a href = {url}>
-
-            <div className="border border-white rounded-md bg-black flex flex-col h-full">
-              <img src={img} className={getImageClass()} />
-      
-              <div className="p-3 md:p-4 flex flex-col">
-                <div>
-                  <h3 className={`text-lg md:text-xl font-bold ${Map[color]}`} style={getTitleStyle()}>{title}</h3>
-                  <p className="text-white mt-2 text-timberwolf text-sm md:text-base">{descr}</p>
-                </div>
-                <p className="text-sm text-timberwolf italic mt-4">{time}</p>
-              </div>
+  return (
+    <Reveal>
+      <Magnetic strength={0.1}>
+        <TiltCard>
+          <a
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+            className="neo-raised neo-press neo-sheen flex h-full flex-col overflow-hidden rounded-[28px]"
+          >
+            <div className="neo-inset m-3 overflow-hidden rounded-[22px]">
+              <img src={img} alt={title} className={imageClass} />
             </div>
-            </a>
-          </div>
-    );
-  }
-  
+            <div className="flex flex-1 flex-col px-5 pb-5">
+              <h3 className="font-display text-xl font-bold text-[var(--accent-deep)]">
+                {title}
+              </h3>
+              <p className="mt-2 text-sm text-[var(--muted)] md:text-base">{descr}</p>
+              <p className="mt-auto pt-4 text-sm italic text-[var(--muted)]">{time}</p>
+            </div>
+          </a>
+        </TiltCard>
+      </Magnetic>
+    </Reveal>
+  );
+}
 
-export default ProjectCard
+export default ProjectCard;

@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Outfit", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Syne", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
       colors: {
         black : "#010400",
         blue : "#007FE0",
@@ -25,5 +29,3 @@ export default {
   },
   plugins: [],
 }
-
-

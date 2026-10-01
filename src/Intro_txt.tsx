@@ -1,85 +1,22 @@
-import { Typewriter } from 'react-simple-typewriter';
-import { useEffect, useState } from 'react';
+import ScrambleText from "./ScrambleText";
 
+function Intro_txt() {
+  return (
+    <div className="text-center">
+      <p className="text-sm font-medium uppercase tracking-[0.28em] text-[var(--muted)] md:text-base">
+        Hi, my name is
+      </p>
+      <ScrambleText
+        as="h1"
+        playOnMount
+        text="Pradosh Thirunavukkarasu"
+        className="mt-3 whitespace-nowrap font-display text-[clamp(1.35rem,5.2vw,3.75rem)] font-extrabold leading-none tracking-tight text-[var(--ink)]"
+      />
+      <p className="mx-auto mt-5 max-w-xl text-base text-[var(--muted)] md:text-xl">
+        Welcome to my website — a tactile, kinetic space for the software I build.
+      </p>
+    </div>
+  );
+}
 
-
-
-function Intro_txt(){
-
-    const type_speed = 40;
-
-    const [one, setOne] = useState(false);
-    const [two, setTwo] = useState(false);
-    const [three, setThree] = useState(false);
-
-
-
-    useEffect( () => {
-        
-        setOne(true);
-
-        const one_time = '👋 Hi! My name is '.length * type_speed +500
-        const two_time = one_time + ' Pradosh Thirunavukkarasu'.length * (type_speed) + 500
-        
-        const timer1 = setTimeout(() => setTwo(true), one_time);
-        const timer2 = setTimeout(() => setThree(true), two_time);
-        
-        
-        return () => {
-            clearTimeout(timer1);
-            clearTimeout(timer2);
-        };
-
-    }, []);
-
-
-
-
-
-    return (
-        <div className="text-white font-bold text-center md:text-left">
-          {one && (
-            <span className="text-white text-lg md:text-4xl">
-              <Typewriter
-                words={['👋 Hi! My name is ']}
-                loop={1}
-                cursor={false}
-                typeSpeed={type_speed}
-
-              />
-            </span>
-          )}
-        <br />
-
-          {two && (
-            <span className="text-green text-xl md:text-5xl">
-              <Typewriter
-                words={[' Pradosh Thirunavukkarasu']}
-                loop={1}
-                cursor={false}
-                typeSpeed={type_speed}
-              />
-            </span>
-          )}
-    
-          <br />
-    
-          {three && (
-            <span className="text-white text-base md:text-3xl">
-              <Typewriter
-                words={[' Welcome to my Website!']}
-                loop={1}
-                cursor
-                cursorStyle="|"
-                typeSpeed={type_speed}
-              />
-            </span>
-          )}
-        </div>
-      );
-    }
-    
-
-
-export default Intro_txt
-
+export default Intro_txt;
